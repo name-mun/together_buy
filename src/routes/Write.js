@@ -3,12 +3,15 @@ import { storageService, dbService } from "fbase";
 import { v4 as uuidv4 } from "uuid";
 
 const Write = ({ userObj }) => {
+  const [number, setNumber] = useState(0);
   const [nweetLocation, setNweetLocation] = useState("");
   const [nweetTitle, setNweetTitle] = useState("");
   const [nweetContent, setNweetContent] = useState("");
-
   const [attachment, setAttachment] = useState("");
 
+  const onIncrease = () => {
+    setNumber(number + 1);
+  };
   const onSubmit = async (event) => {
     event.preventDefault();
     if (nweetLocation === "") {
@@ -23,6 +26,7 @@ const Write = ({ userObj }) => {
       attachmentUrl = await response.ref.getDownloadURL();
     }
     const nweetObj = {
+      id: onIncrease,
       location: nweetLocation,
       title: nweetTitle,
       content: nweetContent,
@@ -36,7 +40,7 @@ const Write = ({ userObj }) => {
     setNweetContent("");
     setAttachment("");
   };
-  const onChange1 = (event) => {
+  
     const {
       target: { value },
     } = event;
