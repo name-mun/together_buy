@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { storageService, dbService } from "fbase";
 
-const Detail = ({ match }) => {
+const DetailTaxi = ({ match }) => {
   const { no } = match.params;
   let loc, ti, co, im, ph;
 
   const [nweets, setNweets] = useState([]);
   useEffect(() => {
     dbService
-      .collection("nweets")
+      .collection("taxiTogether")
       .orderBy("createdAt", "desc")
       .onSnapshot((snapshot) => {
         const nweetArray = snapshot.docs.map((doc) => ({
@@ -36,27 +36,31 @@ const Detail = ({ match }) => {
     <>
       <div className="post-view-wrapper">
         <>
-          <h2 align="center">게시글 상세정보</h2>
+          <h2 align="center" className="detail-post">
+            게시글 상세정보
+          </h2>
 
-          <div className="post-view-row">
+          <div className="detail-location">
             <label>장소</label>
             <label>{loc}</label>
           </div>
-          <div className="post-view-row">
+          <div className="detail-title">
             <label>제목</label>
             <label>{ti}</label>
           </div>
-          <div className="post-view-row">
+          <div className="detail-content">
             <label>내용</label>
             <label>{co}</label>
           </div>
           {im != "" && <img src={im} width="200" height="200" />}
-          <button onClick={onClick2} name="github" className="authBtn">
-            연락하기
-          </button>
+          <div className="detail-Btns">
+            <button onClick={onClick2} name="github" className="detail-Btn">
+              연락하기
+            </button>
+          </div>
         </>
       </div>
     </>
   );
 };
-export default Detail;
+export default DetailTaxi;

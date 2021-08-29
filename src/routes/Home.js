@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { dbService } from "fbase";
-import Nweet from "components/Nweet";
-import NweetFactory from "components/NweetFactory";
+import { useHistory } from "react-router-dom";
 
 const Home = ({ userObj }) => {
   const [nweets, setNweets] = useState([]);
+  const history = useHistory();
+
+  const eatTogetherClick = () => {
+    history.push("/eatTogether");
+  };
+  const goodsTogetherClick = () => {
+    history.push("/goodsTogether");
+  };
+  const taxiTogetherClick = () => {
+    history.push("/taxiTogether");
+  };
+
   useEffect(() => {
     dbService
       .collection("nweets")
@@ -19,15 +30,16 @@ const Home = ({ userObj }) => {
   }, []);
   return (
     <div className="container">
-      <NweetFactory userObj={userObj} />
-      <div style={{ marginTop: 30 }}>
-        {nweets.map((nweet) => (
-          <Nweet
-            key={nweet.id}
-            nweetObj={nweet}
-            isOwner={nweet.creatorId === userObj.uid}
-          />
-        ))}
+      <div className="eatTogetherClick">
+        <span onClick={eatTogetherClick}>배달 같이</span>
+      </div>
+
+      <div className="goodsTogetherClick">
+        <span onClick={goodsTogetherClick}>물건 같이</span>
+      </div>
+
+      <div className="taxiTogetherClick">
+        <span onClick={taxiTogetherClick}>택시 같이</span>
       </div>
     </div>
   );

@@ -37,7 +37,7 @@ export default ({ refreshUser, userObj }) => {
         />
         <input
           type="submit"
-          value="Update Profile"
+          value="닉네임 등록하기"
           className="formBtn"
           style={{
             marginTop: 10,
@@ -45,7 +45,7 @@ export default ({ refreshUser, userObj }) => {
         />
       </form>
       <span className="formBtn cancelBtn logOut" onClick={onLogOutClick}>
-        Log Out
+        로그아웃
       </span>
     </div>
   );

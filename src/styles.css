@@ -10,8 +10,11 @@ input {
   box-sizing: border-box;
 }
 
+header {
+  margin-top: 80px;
+}
 body {
-  background-color: black;
+  background-color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
@@ -31,10 +34,157 @@ a {
 form {
   width: 100%;
 }
+/*category page(home) */
+
+.eatTogetherClick {
+  cursor: pointer;
+  width: 100%;
+  padding: 7px 20px;
+  margin-top: 100px;
+  text-align: center;
+  color: white;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: 50px;
+  position: relative;
+  bottom: 80px;
+  transition: all, 0.4s;
+  filter: brightness(30%);
+}
+
+.eatTogetherClick:hover {
+  cursor: pointer;
+  width: 100%;
+  padding: 7px 20px;
+  margin-top: 100px;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(30, 30, 30);
+  font-size: 50px;
+  position: relative;
+  bottom: 80px;
+}
+
+.goodsTogetherClick {
+  cursor: pointer;
+  width: 100%;
+  padding: 7px 20px;
+  margin-top: 50px;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: 50px;
+  position: relative;
+  bottom: 80px;
+  transition: all, 0.4s;
+  filter: brightness(30%);
+}
+
+.goodsTogetherClick:hover {
+  cursor: pointer;
+  width: 100%;
+  padding: 7px 20px;
+  margin-top: 50px;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(30, 30, 30);
+  font-size: 50px;
+  position: relative;
+  bottom: 80px;
+}
+
+.taxiTogetherClick {
+  cursor: pointer;
+  width: 100%;
+  padding: 7px 20px;
+  margin-top: 50px;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: 50px;
+  position: relative;
+  bottom: 80px;
+  transition: all, 0.4s;
+  filter: brightness(30%);
+}
+
+.taxiTogetherClick:hover {
+  cursor: pointer;
+  width: 100%;
+  padding: 7px 20px;
+  margin-top: 50px;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(30, 30, 30);
+  font-size: 50px;
+  position: relative;
+  bottom: 80px;
+}
+
+.authlogo {
+}
+
+.home-logo {
+  top: -70px;
+  left: -70px;
+  position: relative;
+}
+
+.home-faUser {
+  top: -50px;
+  left: 20px;
+  position: relative;
+}
 
 .nweet-input::placeholder {
   color: white;
   opacity: 0.9;
+}
+
+.text-btn {
+  position: fixed;
+  bottom: 8%;
+  right: 50%;
+  height: 100%;
+  height: 30px;
+  border: 1px solid #4f524b;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-home-logo {
+  top: 0px;
+  left: -70px;
+  position: relative;
+}
+
+.nav-home-faUser {
+  top: 0px;
+  left: 70px;
+  position: relative;
 }
 
 .container {
@@ -84,6 +234,65 @@ form {
   margin-top: 50px;
 }
 
+/*detail page*/
+
+.detail-post {
+  font-size: 20px;
+  width: 300px;
+  height: 25px;
+  border: 1px solid grey;
+  color: black;
+}
+
+.detail-location {
+  font-size: 20px;
+  width: 300px;
+  height: 30px;
+  border: 1px solid grey;
+  color: black;
+  margin-top: 10px;
+}
+
+.detail-title {
+  font-size: 20px;
+  width: 300px;
+  height: 30px;
+  border: 1px solid grey;
+  color: black;
+  margin-top: 10px;
+}
+
+.detail-content {
+  font-size: 20px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid grey;
+  color: black;
+  margin-top: 10px;
+}
+
+.detail-Btns {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.detail-Btn {
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 0px;
+  font-size: 12px;
+  text-align: center;
+  width: 150px;
+  background: white;
+  box-shadow: 10px 10px 10px grey;
+  cursor: pointer;
+}
+/*Write page*/
+
 /* Nwitter Factory */
 
 .factoryForm {
@@ -93,42 +302,105 @@ form {
   width: 100%;
 }
 
-.factoryInput__container {
+.factoryInput__input_location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  width: 300px;
+  height: 30px;
+  padding: 0px 20px;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 0px;
+  color: black;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.factoryInput__input_Phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 15px;
+  width: 300px;
+  height: 30px;
+  flex-grow: 1;
+  padding: 0px 20px;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 0px;
+  color: black;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.factoryInput__input_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 15px;
+  width: 300px;
+  height: 30px;
+  flex-grow: 1;
+  padding: 0px 20px;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 0px;
+  color: black;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.factoryInput__input_contect {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
   margin-bottom: 20px;
-  width: 100%;
-}
-
-.factoryInput__input {
+  width: 300px;
+  height: 300px;
   flex-grow: 1;
-  height: 40px;
-  padding: 0px 20px;
+  padding: 5px 20px;
   color: white;
-  border: 1px solid #04aaff;
-  border-radius: 20px;
+  border: 1px solid grey;
+  border-radius: 0px;
+  color: black;
   font-weight: 500;
   font-size: 12px;
 }
 
 .factoryInput__arrow {
-  position: absolute;
-  right: 0;
-  background-color: #04aaff;
-  height: 40px;
-  width: 40px;
+  background-color: black;
+  width: 150px;
   padding: 10px 0px;
   text-align: center;
+  align-content: center;
+  justify-content: center;
   border-radius: 20px;
   color: white;
   box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
+  background: black;
+  box-shadow: 10px 10px 10px grey;
+  cursor: pointer;
+  display: flex;
+  margin-top: 15px;
+  max-width: 320px;
 }
 
 .factoryInput__label {
-  color: #04aaff;
+  color: black;
   cursor: pointer;
 }
 
@@ -150,7 +422,7 @@ form {
 }
 
 .factoryForm__clear {
-  color: #04aaff;
+  color: black;
   cursor: pointer;
   text-align: center;
 }
@@ -159,22 +431,63 @@ form {
   margin-right: 10px;
   font-size: 12px;
 }
+/*
 
 /* Nweet */
 
-.nweetEdit .formBtn {
+.nweetEdit {
+  cursor: pointer;
+  width: 100%;
+  height: 85px;
+  margin-top: 1px;
+  margin-bottom: -50px;
+}
+
+.formBtn {
   cursor: pointer;
   margin-top: 15px;
   margin-bottom: 5px;
 }
 
+.nweet-location {
+  float: left;
+  width: 150px;
+  height: 20px;
+  font-size: 15px;
+  font-display: center;
+  padding-bottom: -10px;
+  margin-bottom: 0px;
+  margin-top: -2px;
+}
+
+.nweet-title {
+  font-size: 18px;
+  float: left;
+  width: 250px;
+  margin-top: 2px;
+  margin-right: 100px;
+  margin-bottom: 0px;
+  height: 20px;
+}
+
+.nweetEdit-btn {
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 10px;
+  width: 300px;
+  height: 50px;
+  border-color: white;
+}
+
 .nweet {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   background-color: white;
+  border: 1px solid black;
   width: 100%;
   max-width: 320px;
+  right: 2px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 0px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -186,8 +499,8 @@ form {
 }
 
 .nweet img {
-  right: -10px;
-  top: 20px;
+  right: 20px;
+  top: 10px;
   position: absolute;
   border-radius: 50%;
   width: 50px;
@@ -209,12 +522,29 @@ form {
   margin-right: 10px;
 }
 
+/*navigation*/
+
+.nav {
+  position: fixed;
+  top: 0;
+  /* width: 100% */
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
 /* Auth */
+
+.auth-img {
+  margin-bottom: 100px;
+  margin-left: 22px;
+}
 
 .authContainer {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin-top: -100px;
   justify-content: center;
   align-items: center;
 }
@@ -235,6 +565,7 @@ form {
   text-align: center;
   width: 150px;
   background: white;
+  box-shadow: 10px 10px 10px grey;
   cursor: pointer;
 }
 
@@ -250,12 +581,14 @@ form {
   font-size: 12px;
   color: black;
   box-sizing: content-box;
+  box-shadow: 10px 10px 10px grey;
 }
 
 .authSubmit {
   text-align: center;
-  background: #04aaff;
+  background: rgb(75, 74, 74);
   color: white;
+  font-size: 15px;
   margin-top: 10px;
   box-sizing: content-box;
   cursor: pointer;
@@ -269,7 +602,7 @@ form {
 }
 
 .authSwitch {
-  color: #04aaff;
+  color: rgb(40, 30, 30);
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 50px;
